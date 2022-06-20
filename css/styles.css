@@ -4704,10 +4704,26 @@ a.close.disabled {
 .bg-primary {
   background-color: #7fb0c7 !important; }
 
+.bg-about {
+  background-color: #7CFC00 !important; }
+
+.bg-resume {
+  background-color: #2ADFD4 !important; }
+
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
   background-color: #5c9ab7 !important; }
+
+a.bg-about:hover, a.bg-about:focus,
+  button.bg-about:hover,
+  button.bg-about:focus {
+    background-color: #7CFC00 !important; }
+
+a.bg-resume:hover, a.bg-about:focus,
+button.bg-resume:hover,
+button.bg-resume:focus {
+  background-color: #2ADFD4 !important; }
 
 .bg-secondary {
   background-color: #ec774f !important; }
@@ -5690,6 +5706,7 @@ button.bg-dark:focus {
 
 .mb-5,
 .my-5 {
+  text-align: left;
   margin-bottom: 3rem !important; }
 
 .ml-5,
@@ -7281,7 +7298,8 @@ h3 {
   .masthead .masthead-subheading {
     font-size: 1.25rem; }
   .masthead .masthead-avatar {
-    width: 15rem; }
+    width: 20rem; 
+    border-radius: 100%;}
 
 @media (min-width: 992px) {
   .masthead {
@@ -7414,3 +7432,119 @@ form .row:first-child .floating-label-form-group {
 
 .btn-social {
   margin-bottom: 0.5rem; }
+
+.hovernow {
+  margin-top:20px;
+  background-color: #7fb0c7;
+  display: flex;
+  min-width: 100%;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-right: 20px;
+  /* padding-bottom: 20px; */
+  padding-left: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.hovernow:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.resume-title {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #000;
+  font-style: oblique;
+}
+
+.resume-body {
+  font-size: 1.2em;
+  color: #fff;
+  font-style: oblique;
+}
+
+.resume-name {
+  margin-top:20px;
+  font-size: 1.5em;
+  text-align: left;
+  color: #304CEC;
+  font-style: oblique;
+}
+
+.resume-sub-title {
+  font-size: 1.2em;
+  color: #000;
+  font-style: oblique;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.resume-left{
+  width: 15%; 
+  padding-bottom: 0;
+  float:left;
+}
+
+.resume-right{
+  padding-left: 30px;
+  width: 80%; 
+  float:right;
+}
+
+.resume-text{
+  display: flex;
+  justify-content: center;
+}
+
+.logo_style{
+  max-width:100%;
+  max-height:40%;
+  margin-right: auto;
+  margin-left: auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.resume-btn{
+  margin-top:20px;
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.resume-btn:hover {
+  background-color: RoyalBlue;
+}
+
+.github-button {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.github-button:hover {background-color: #3e8e41}
+
+.github-button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.portfolio-image {
+  padding: 20px;
+}
