@@ -7647,3 +7647,10 @@ form .row:first-child .floating-label-form-group {
 .top-padding{
   padding-top: 5%;
 }
+
+.temp {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50px;
+}
