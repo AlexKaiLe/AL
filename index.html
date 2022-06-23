@@ -77,7 +77,7 @@
                 <!-- Work Experience Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-dna"></i></div>
+                    <div class="divider-custom-icon"><i class="fas fa-briefcase"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Work Experience Content-->
@@ -228,7 +228,7 @@
             <div class="container">
                 <!-- Portfolio Section Heading-->
                 <div class="text-center">
-                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">PROJECT MANAGEMENT AND TECHNICAL PROJECTS</h2>
+                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">TECHNICAL PROJECTS</h2>
                 </div>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
@@ -278,6 +278,13 @@
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div><img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="Google Biodesign"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div><img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="RISD Industrial Design "/>
                         </div>
                     </div>
@@ -295,7 +302,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Melanoma-Skin-Tones</h2>
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">Melanoma Skin Tones</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -412,11 +419,35 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Developed a website that pairs registered users from a unique organization based on similar interests using a KD tree data structure to find the optimal compatibility between people.</p>
-                                     <!-- Github repo -->
-                                     <a href="https://github.com/AlexKaiLe/Yoki"><button class="github-button">Github Repo</button></a> <br>
+                                    <p class="resume-sub-title">Developed a website that pairs registered users from a unique organization based on similar interests using a KD tree 
+                                        data structure to find the optimal compatibility between people.</p>
+                                    <!-- Github repo -->
+                                    <a href="https://github.com/AlexKaiLe/Yoki"><button class="github-button">Github Repo</button></a> <br>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/yoki.gif" alt="Yoki"/>
+                                    <img class="img-fluid rounded video-style" src="assets/img/portfolio/yoki.gif" alt="Yoki"/>
+                                    <p class="resume-sub-title">Complex algorithm</p>
+                                    <p class="mb-5">Used a KDTree for the complex algorithm, in which each point in the tree represents a user's array of interest levels. In other 
+                                        words, with n total interests a user can choose from, each user will be associated with an array size n, where each index represents a 
+                                        unique interest category, and its values are the user's interest level for that specific interest. In addition, we use the KDTree 
+                                        create a sorted ArrayList of users with a special heuristic comparator our team designed. The heuristic comparator takes two users' 
+                                        interest level arraysand compares their values of the same interests categories one by one. We designed it so that, the smaller the gap 
+                                        is between two users' interest levels, the higher their sorting priority is. In addition, the higher the interestlevels of both users are, 
+                                        the higher their sorting priority is. With this, we were able to create a list of "best" matchesbetween a user and other users which is 
+                                        based off of similar interests.</p>
+                                    <p class="mb-5">Since the KDTree's main purpose is to provide the best structure for quicker sorting on a fixed dataset, we programmed the 
+                                        KDTree so that it is (re)built everytime a user updates their interest or when a new user is added to the database. This is because the KDTree 
+                                        is created based on the comparing individual dimension (or interests categories) for each depth/level in the tree, but since changing a user's 
+                                        interests gives the user a new "coordinate," the KDTree will not longer be the most efficient for nearest searched. Thus, we reconstruct the 
+                                        tree everytime a user's interest levels are modified. In addition, when a user does not specify their level of interest in a particular 
+                                        interest category, its default value will be 0.</p>
+                                    <p class="resume-sub-title">Encryption</p>
+                                    <p class="mb-5">To ensure the safety and privacy protection of all of our users, we decided to implement encryptionfor user logs in and signs ups.
+                                        We included a password encryption algorithm between the frontend and backend,as well as between the backend and database. This way, no outsiders 
+                                        can access the real value of the user's passwordwhen the different parts of our project communicate with one another. To create extra security, 
+                                        we made sure thatwe did not hardcode the cypher key in any of our project files. Instead, we have it stored in a separate key.txtfile, which can 
+                                        only be accessed by a file reader. With the cypher key in a separate file, we will add it to .gitignore so that it will never be pushed to the 
+                                        repo and thus the public. 
+                                    </p>
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
@@ -444,8 +475,10 @@
                                     <p class="resume-sub-title">
                                         Link to final presentation slides:Analyzing rat behavior and their correlation with neurological activity. Constructed a convolutional neural network to identify 
                                         unmarked 3D points using spatial and temporal data.</p>
+                                    <!-- Github repo -->
+                                    <a href="https://github.com/AlexKaiLe/Harvard-Neuroscience-Research"><button class="github-button">Github Repo</button></a> <br>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/neuro activity.gif" alt="Harvard-Neuroscience-Research"/>
+                                    <img class="img-fluid rounded video-style" src="assets/img/portfolio/neuro activity.gif" alt="Harvard-Neuroscience-Research"/>
                                     <ul class="resume-sub-title">
                                         <p class="resume-sub-title">2021 REU Harvard System Biology Internship Sponsored by:</p>
                                         <li>Harvard Medical School: Blavatnik Institute</li>
@@ -477,7 +510,7 @@
                                         system that can process this large data. As a consequence of our work, many labs will also be able to more powerfully and efficiently determine how mutations, 
                                         neurological conditions, environmental exposures, or medical interventions affect rat movement and behavior, generating insights and strategies for improving human health.</p>
 
-                                    <p class="mb-5">The following code constructs a CNN that can predict the identity of a point in a given frame. The following notebook is divided into 
+                                    <p class="mb-5">The code constructs a CNN that can predict the identity of a point in a given frame. The following notebook is divided into 
                                         two major sections. The first section is to create a CNN to train and test a deep learning model using TensorFlow. The second section is to take 
                                         temporal data and predict a cluster of points in time. At the end of the program, you can visualize a rat's movement in 3D space. This is a deep 
                                         learning project analyzing rat behavior and their correlation with neurological activity. Utilized MATLAB to preprocess raw video data and developed 
@@ -501,16 +534,53 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Genome-Assembly </h2>
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">Genome Assembly </h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
                                         <div class="divider-custom-icon"><i class="fas fa-dna"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="Genome-Assembly "/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Takes a file of k-mers and infers an optimal sequence derived from a De Bruijn graph. The k-mers are first decontaminated and infrequent k-mers are corrected.</p>
+                                    <p class="resume-sub-title">Takes a file of k-mers and infers an optimal sequence derived from a De Bruijn graph. The k-mers are first 
+                                        decontaminated and infrequent k-mers are corrected. The algorithm sucessfully obtained a 99.85% match identification with the severe 
+                                        acute respiratory syndrome coronavirus 2 genenome assembly.</p>
+                                    <!-- Github repo -->
+                                    <a href="https://github.com/AlexKaiLe/Genome-Assembly"><button class="github-button">Github Repo</button></a> <br>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded video-style" src="assets/img/portfolio/assembly.png" alt="Genome-Assembly "/>
+                                    <p class="mb-5">The purpose of this program is to take in a file of k-mers and develop an optimal sequence derived from a 
+                                        De Bruijn graph. Before creating the De Bruijn graph, the k-mers are first decontaminated by known vectors and then any 
+                                        infrequent sub k-mers are then replaced with more frequent k-mers to ensure the integrity of the DNA samples that are given. 
+                                        Decontamination is performed with BLAST like seeding and extension. Once all the k-mers are decontaminated and corrected, the 
+                                        k-mers are placed in a De Bruijn algorithm that siplifies/condenses the graph to find the longest inferred sequence for the given k-mers. 
+                                        The program was able to take 50-mer reads and reconstruct 16 reads of length 1260 of the Sars-Covid-2 receptor binding domain.
+                                    </p>
+                                    <img class="img-fluid rounded video-style" src="assets/img/portfolio/assembly_graph.png" alt="Genome-Assembly "/>
+                                    <p class="mb-5"> In order to find the optimal parameters, I had to analyze which values for k (k-mer length), t (threshold for frequent kmer), and 
+                                        d (hamming distance threshold). After analyzing the average ungapped global alignment score of each true/corrected read pair, I decided that these 
+                                        values optimal to reconstruct the genenome. 
+                                        <ul class="mb-5">
+                                            <li>10 = kmer length to determine seeding in contamination</li>
+                                            <li>30 = kmer length of reads used to correct and construct a De Bruijn graph</li>
+                                            <li>17 = kmer length to determine seeding in correction</li>
+                                            <li>2 = threshold value for common kmer frequency in correction</li>
+                                            <li>2 = difference value for kmer variability by in correction</li>
+                                        </ul>  
+                                    </p>
+                                    <p class="mb-5">After the file of k-mers were decontaminated and corrected, the program created a De Bruijn graph that allowed me to 
+                                        infer the most likely sequence. The De Bruijn code also creates a simplified graph to reduce memory storage. 
+                                    </p>
+                                    <p class="resume-sub-title">Example of simple De Bruijn graph compression</p>
+                                    <img class="img-fluid rounded col-lg-4 ml-auto" src="assets/img/portfolio/complex.png" alt="complex"/>
+                                    <img class="img-fluid rounded col-lg-4 mr-auto" src="assets/img/portfolio/simple.png" alt="simple"/> <br>
+                                    <p class="resume-sub-title">Example of complex De Bruijn graph compression</p>
+                                    <img class="img-fluid rounded video-style" src="assets/img/portfolio/debruijn.png" alt="simple"/> <br>
+                                    <p class="mb-5">After applying the De Bruijn algorithm to the kmer reads, I was able to obtain 16 reads of length 1260.
+                                    </p>
+                                    <p class="resume-sub-title">Example of inferred reconstructed genenome</p>
+                                    <p class="mb-5">ATGTCTGATAATGGACCCCAAAATCAGCGAAATGCACCCCGCATTACGTTTGGTGGACCCTCAGATTCAACTGGCAGTAACCAGAATGGAGAACGCAGTGGGGCGCGATCAAAACAACGTCGGCCCCAAGGCTTACCCAATAATACTGCGTCTTGGTTCACCGCTCTCACTCAACATGGCAAGGAAGACCTTAAATTCCCTCGAGGACAAGGCGTTCCAATTAACACCAATAGCAGTCCAGATGACCAAATTGGCTACTACCGAAGAGCTACCAGACGAATTCGTGGTGGTGACGGTAAAATGAAAGATCTCAGTCCAAGATGGTATTGCTACTACCTAGGAACTGGGCCAGAAGCTGGACTTCCCTATGGTGCTAACAAAGACGGCATCATATGGGTTGCAACTGAGGGAGCCTTGAATACACCAAAAGATCACATTGGCACCCGCAATCCTGCTAACAATGCTGCAATCGTGCTACAACTTCCTCAAGGAACAACATTGCCAAAAGGCTTCTACGCAGAAGGGAGCAGAGGCGGCAGTCAAGCCTCTTCTCGTTCCTCATCACGTAGTCGCAACAGTTCAAGAAATTCAACTCCAGGCAGCAGTAGGGGAACTTCTCCTGCTAGAATGGCTGGCAATGGCGGTGATGCTGCTCTTGCTTTGCTGCTGCTTGACAGATTGAACCAGCTTGAGAGCAAAATGTCTGGTAAAGGCCAACAACAACAAGGCCAAACTGTCACTAAGAAATCTGCTGCTGAGGCTTCTAAGAAGCCTCGGCAAAAACGTACTGCCACTAAAGCATACAATGTAACACAAGCTTTCGGCAGACGTGGTCCAGAACAAACCCAAGGAAATTTTGGGGACCAGGAACTAATCAGACAAGGAACTGATTACAAACATTGGCCGCAAATTGCACAATTTGCCCCCAGCGCTTCAGCGTTCTTCGGAATGTCGCGCATTGGCATGGAAGTCACACCTTCGGGAACGTGGTTGACCTACACAGGTGCCATCAAATTGGATGACAAAGATCCAAATTTCAAAGATCAAGTCATTTTGCTGAATAAGCATATTGACGCATACAAAACATTCCCACCAACAGAGCCTAAAAAGGACAAAAAGAAGAAGGCTGATGAAACTCAAGCCTTACCGCAGAGACAGAAGAAACAGCAAACTGTGACTCTTCTTCCTGCTGCAGATTTGGATGATTTCTCCAAACAATTGCAACAATCCATGAGCAGTGCTGACTCAACTCAGGCCTAA
+                                    </p>
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>

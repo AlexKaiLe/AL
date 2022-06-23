@@ -389,6 +389,7 @@ mark,
 
 .img-fluid {
   max-width: 100%;
+  width: 100%;
   height: auto; }
 
 .img-thumbnail {
@@ -5709,6 +5710,7 @@ button.bg-dark:focus {
 .my-5 {
   text-align: left;
   font-size: 1.2rem;
+  overflow-wrap: break-word;
   margin-bottom: 3rem !important; }
 
 .ml-5,
@@ -7592,6 +7594,7 @@ form .row:first-child .floating-label-form-group {
 .video-style{
   align-items: center;
   padding: 5%;
+  width: 100%;
 }
 
 .icon-links{
